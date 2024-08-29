@@ -5,23 +5,70 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="author" content="Michelle Showers">
 <meta name="description" content="Sweetdazzletreatz Food Catering Services">
-<meta name="keywords" content="theme cakes, birthdays, cakes, desserts, celebrations, cupcakes">
+<meta name="keywords" content="weddings, birthdays, cakes, desserts, celebrations,pastries">
 
 
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-
+<script src="https://www.w3schools.com/lib/w3.js"></script>
 <style>
 body {font-family:"Tahoma", Helvetica, sans-serif;}
 h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-spacing:5px}
 
+/* style the header */
+.header{
+  position: relative;
+  height: 200px;
+  background-color:white; 
+  padding:5px;
+  text-align:center; 
+  background-image: url('image/bg4.jpg');
+  display: center; 
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  color:#14f3f2;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: inherit;
+    filter: blur(10px);
+    transform: scale(0.5);
+}
+
+.header-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color:black ;
+    padding: 30px;
+}
+
+
+.header h1 {
+    margin: 10;
+    font-size: 36px;
+}
+
+.header h4{
+    margin: 0;
+    font-size: 20px;
+}
 
 *{
   box-sizing: border-box;
-  margin: 0px;
-  padding: 5px;
+  margin: 0;
+  padding: 0;
   body {margin: 0}
 }
   
@@ -29,7 +76,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-
 .img-container { 
   float: left;
   width:10%;
-  padding: 0px 20px 0px 40px;
+  padding: 1px 16px;
   color: #a52a2a;
   text-align: left;
   }
@@ -39,6 +86,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-
   clear:both;
   display:table;
 }
+ 
 
 
 
@@ -50,6 +98,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-
   background-color: #fffff;
   color: #a52a2a;
   font-family: inherit;
+  
 }
 
 .navbar a {
@@ -59,7 +108,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  
+   
 }
 
 .dropdown {
@@ -93,76 +142,12 @@ h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-
   z-index: 1;
 }
 
+
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-body {
-  margin: 0 px;
-  background-image: url('image/bg3.jpg'); 
-  style= width:100%;
-  background-size: cover;
-  background-position: center;
-
- }
-
-.rounded-button {
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #ffffff; /* White text color */
-    background-color: #8068d6; /* Purple background color */
-    border: none;
-    border-radius: 10px; /* Rounded edges */
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition for hover effect */
-}
-
-.rounded-button:hover {
-    background-color: #a52a2a; /* Change background color on hover */
-    transform: scale(1.05); /* Slightly enlarge button on hover */
-}
-
-
-
-img {
-    width: 92px; /* Set a  size for the image */
-    height: 90px;
-    margin-right: 10px;
-    border-radius: 10px;
-
-}
-
-
-
-p {
-    margin: 10px;
-    font-style:italic;
-
-
-}
-
-
-
-/* style the button */
-
-.round-button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
-    color: #f62fc4; /* Pink font color */
-    background-color: #14f3f2; /* blue background color */
-    border: none;
-    border-radius: 50%; /* Makes the button round */
-    cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
-    text-align: center;
-}
-
-.round-button:hover {
-    background-color: #a52a2a; /* Changes to a different color on hover */
-}
-
-  /* Create 5 equal columns that floats next to each other */
+/* Create 5 equal columns that floats next to each other */
 .column {
   float: left;
   width: 20%;
@@ -200,6 +185,8 @@ footer {
     bottom: 0;
 }
 
+
+
 .social-media {
     display: flex;
     gap: 20px;
@@ -224,21 +211,6 @@ footer {
   width: 100%;
   }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    table {
-        width: 100%; /* Ensure table adapts to smaller screens */
-    }
-}
-
-
-@media screen and (min-width: 601px) {
-  
-    font-size:auto;
-  }
-
-
-
   .dropdown-content {
         min-width: 100%;
         left: 0;
@@ -248,6 +220,15 @@ footer {
   footer {
         position: static;
     }
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 93%;
+}
+
 
 button {
     padding: 10px 20px;
@@ -264,9 +245,7 @@ button:hover {
     background-color: fuchsia;
     color:aqua;
 }
-
-
-        .container {
+   .container {
             display: flex;
             flex-direction: row; /* Display divs side by side on larger screens */
             justify-content: space-between;
@@ -303,38 +282,47 @@ button:hover {
                 font-size: calc(0.9rem + 1vw); /* Responsive font size for smaller screens */
             }
         }
+
 </style>
 
 </head>
 
 <body>
-
-<div class="clearfix">
-    
-  <!--Logo information -->
-<div class="img-container">
-  <img src="image/logo3.png" alt="Logo" style="width:74px; height: 68px; padding: 0px; ">
+<header>
+  <!--Header information -->
+  <div class="header">
+  <div class="header-content">
+  <h1><b>Sweet Dazzle Treatz</b></h1>
+  <h4><b>Food Catering Services</b></h4>
 </div>
+</div>
+</header>
+<div class="clearfix">
 
+
+<!--Logo information -->
+<div class="img-container">
+  <img src="image/logo3.png" alt="Logo" style="width:74px; height: 68px; margin-left: 100px; ">
+</div>
 
 <!--Navigation Bar -->
 
-<div class="navbar" style="justify-content: left;"><strong>
+<div class="navbar" style="justify-content: left; margin-left: 220px;"><strong>
  
-<a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i>&nbsp; Home</a>&nbsp;
-<a href="about.html" class="w3-bar-item w3-button w3-pink"><i class="fa fa-user"></i>&nbsp; About</a>&nbsp;
+<a href="index.html" class="w3-bar-item w3-button w3-pink"><i class="fa fa-home"></i>&nbsp; Home</a>&nbsp;
+<a href="about.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i>&nbsp; About</a>&nbsp;
 <a href="services.html" class="w3-bar-item w3-button"><i class="fa fa-clone"></i>&nbsp; Services</a>&nbsp;
 
   <div class="dropdown">
-    <button class="dropbtn" style="font-size: 17px;"><i class="fa fa-list"></i>&nbsp;  Order&nbsp;
+    <button class="dropbtn " style="font-size: 17px; "><i class="fa fa-list"></i>&nbsp;  Order&nbsp;
       <i class="fa fa-caret-down"></i>
-    </button>
+          </button>
     </strong>
     <div class="dropdown-content">
       <div class="row">
         <div class="column">
 
-          <a href="specialcakes.html">Speciality Cakes</a>
+          <a href="specialcakes.html">Specialty Cakes</a>
           <a href="cheesecake.html">Cheesecake</a>
           <a href="cupcakes.html">Cupcakes</a>
           <a href="tiramisu.html">Tiramisu</a>
@@ -348,9 +336,9 @@ button:hover {
   
   <a href="contact.html" class="w3-bar-item w3-button"><strong><i class="fa fa-phone"></i>&nbsp;  Contact us</strong></a>
   <div>
+    <br><br>
 </div>
 </div>
-
 
 <!--Email & whatsapp -->
 <div>
@@ -362,6 +350,7 @@ button:hover {
             <a href="https://wa.me/18683899249" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
             &nbsp; 
             &nbsp; &nbsp;
+
             <div style="background-color: white; border-radius: 10px;color: brown;  text-align: center;font-size: 17px; font-family: georgia;"
     > Click the button to see map for pick up location. &nbsp; &nbsp;<br>
      <button onclick="window.open('map.html', '_blank')">Map</button>
@@ -374,47 +363,39 @@ button:hover {
 
 
 <!-- Start Content -->
-<div id="about" class="w3-content ">
+<div id="home" class="w3-content">
 
-<div>
-<div class="w3-container w3-animate-left w3-center w3-white " style="border-radius: 10px;">
-  
- <h3 style="color:#f62fc4;"><strong>About us: Sweet Dazzle Treatz </strong></h3>
- 
+<!-- Image in Display Container -->
+
+<div class="w3-padding-top-48">
+<div class="w3-display-container" style="border-radius:10px; border: 4px none;">
+
+<!-- Slides -->
+<img class="slides" src="image/slide7.png" width="100%" height="800px" alt="tiramisu">
+<img class="slides center " src="image/slide3.jpeg" height="800px" alt="birthday cake">
+<img class="slides center" src="image/slide5.jpg"  height="800px" alt="wedding cake, cake pop, trifle, cupcakes">
+<img class="slides center" src="image/slide6.jpg"  height="800px" alt="wedding display, cupcakes, desserts">
+<img class="slides" src="image/slide6.png" width="100%" height="800px"alt="cheesecake">
+<img class="slides" src="image/slide5.png" width="100%" height="800px" alt="wedding cake">
+<img class="slides center" src="image/slide1.jpeg"  height="800px" alt="birthday cake" >
+<img class="slides" src="image/slide3.png" width="100%" height="800px" alt="celebratory cakes: weddings,anniversary">
+<img class="slides center" src="image/slide2.jpeg"  height="800px" alt="birthday cake">
+<img class="slides" src="image/slide4.png" width="100%" height="800px" alt="pastries-tarts, bread, sweet bread, tuna puffs ">
+<img class="slides" src="image/slide4.jpg" width="100%" height="800px" alt="brunch box, pastries, corissant">
+<img class="slides" src="image/slide1.png" width="100%" height="800px" alt="cupcakes,wedding cakes">
+<img class="slides" src="image/ccakes.png" width="100%" height="800px"alt="mini cheesecake, bento cakes, cupcakes">
+<!--Slideshow -->
+<script>
+w3.slideshow(".slides", 5000);
+</script>
+
 </div>
 </div>
 </div>
 
-<div class="container">
-        <div class="image-div">
-           <img src="image/chef1.jpg" alt="cat theme cake" style="width:100%;background-color: lightblue; height:512 px;  border-radius: 10px; padding-top: 5px;">
-        </div>
-        <div class="text-div">
-            <p style="background-color: white;  border-radius: 10px; font-size: 24px;  color: #a52a2a; font-family: cursive; text-align: left; padding: 15px 10px 5px 12px; justify-content: left; height:512 px;">
-            <i>
-Launched in 2014, Sweet Dazzle Treatz Food Catering Services is an Online Baked Goods and Pastry Shop. It has been delivering handcrafted, gourmet cakes, desserts and pastries to homes across the country. 
-<br><br>
-Founded by Emma Showers, a passionate baker with a dream of making high-quality pastries, baked products and specialty gourmet cakes accessible to everyone, Sweet Dazzle Treatz combines the warmth of homemade baking with the convenience of online shopping. 
-<br><br>
-Emma’s journey into the world of baking began in her grandmother's kitchen, where she learned the art of creating mouth-watering treats from scratch. Later, she honed her skills at a prestigious culinary school.
-<br><br>
-Emma realized the potential of bring her creations to a wider audience through online platforms. Thus, Sweet Dazzle Treatz was born. 
- </i></p>
-        </div>
-    </div>
-
-<div class="w3-container">
-  <!-- Quote from the chef */-->  
-  <div class="w3-panel w3-brown" style=" border-radius:10px;">
-    <p style="padding: 20px; font-size: 20px; "><i>From the chef:"Let us (my team of dazzlers-helpers and I) bring joy to your tastebuds!"</i></p>
-  
-  </div>
-</div>
 
 
-</section>
-
-    <!-- Footer -->
+ <!-- Footer -->
 <footer >
 <div class="w3-container  w3-center" style="background-color: white; border-radius: 10px;">
   <br><br>
@@ -430,5 +411,5 @@ Emma realized the potential of bring her creations to a wider audience through o
         </div>
       </div>
     </footer>
-</body>
-</html>
+
+</body></html>

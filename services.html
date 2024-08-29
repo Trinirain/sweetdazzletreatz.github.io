@@ -17,52 +17,6 @@
 body {font-family:"Tahoma", Helvetica, sans-serif;}
 h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-spacing:5px}
 
-/* style the header */
-.header{
-  position: relative;
-  height: 40px;
-  background-color:white; 
-  padding:0px;
-  text-align:center; 
-  display: center; 
-  
-  color:#fffff;
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-
-.header::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: inherit;
-    filter: blur(10px);
-    transform: scale(0.5);
-}
-
-.header-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color:white ;
-    padding: 10px;
-}
-
-
-.header h1 {
-    margin: 10;
-    font-size: 36px;
-}
-
-.header h4{
-    margin: 0;
-    font-size: 20px;
-}
-
 
 *{
   box-sizing: border-box;
@@ -129,15 +83,17 @@ h1,h2,h3,h4,h5,h6 {font-family:"Georgia",Tahoma, Arial,serif,sans-serif; letter-
   color:#14f3f2;
 }
 
+
 .dropdown-content {
   display: none;
   position: absolute;
   background-color:floralwhite;
-  width: 100%;
+  width: 70%;
   left: 5;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
+
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -218,12 +174,6 @@ img {
 
 
 
-p {
-    margin: 5px;
-    font-style:italic;
-
-
-}
 
 
 
@@ -328,11 +278,7 @@ footer {
 
 
 
-  .dropdown-content {
-        min-width: 100%;
-        left: 0;
-        right: 0;
-    }
+  
 }
   footer {
         position: static;
@@ -381,7 +327,7 @@ button:hover {
     </strong>
     <div class="dropdown-content">
       <div class="row">
-        <div class="column">
+        <div class="column" style="width: 200px;">
 
           <a href="specialcakes.html">Speciality Cakes</a>
           <a href="cheesecake.html">Cheesecake</a>
